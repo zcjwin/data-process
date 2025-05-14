@@ -1,0 +1,10 @@
+numpy>=1.26.4
+pandas>=2.2.3
+albumentations==1.4.15
+opencv-python==4.10.0.84
+pillow==11.0.0
+python-dotenv==1.1.0
+requests==2.32.3
+tqdm==4.66.5
+PyYAML==6.0.2
+pypinyin==0.54.0

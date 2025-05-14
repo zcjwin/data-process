@@ -1,0 +1,19 @@
+type: yolov9
+name: yolov9-s
+display_name: yolov9
+model_path: .\best.onnx
+confidence_threshold: 0.25
+names:
+  - 云杉小墨天牛
+  - 切梢小蠹
+  - 思茅松毛虫
+  - 松墨天牛
+  - 松纵坑切梢小蠹
+  - 桑螟
+  - 落叶松毛虫
+  - 赤松毛虫
+  - 马尾松毛虫
+  - 天蛾
+  - 斑衣蜡蝉
+  - 蝉
+  - 迁粉蝶
