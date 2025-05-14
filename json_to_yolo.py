@@ -30,33 +30,22 @@ def is_image_file(filename):
 
 
 def file_list(top_path):
-    data = []
-    image_data = []
-    for file in os.listdir(top_path):
-        if os.path.isdir(os.path.join(top_path, file)):
-            data += file_list(os.path.join(top_path, file))
-        elif file.endswith(".json"):
-            data.append(os.path.join(top_path, file))
-        elif is_image_file(file):
-            data.append(os.path.join(top_path, file))
-    return data, image_data
-
-    # json_list = []
-    # image_list = []
-    # for dirpath, dirnames, filenames in os.walk(top_path):
-    #     # print(f"当前目录: {dirpath}")
-    #     # print("子目录:")
-    #     # for dirname in dirnames:
-    #     #     print(f"  {dirname}")
-    #     # print("文件:")
-    #     for filename in filenames:
-    #         # print(f"  {filename}")
-    #         if filename.endswith(".json"):
-    #             json_list.append(os.path.join(dirpath, filename))
-    #         elif is_image_file(filename):
-    #             image_list.append(os.path.join(dirpath, filename))
-    #     # print("-" * 20)
-    # return json_list, image_list
+    json_list = []
+    image_list = []
+    for dirpath, dirnames, filenames in os.walk(top_path):
+        # print(f"当前目录: {dirpath}")
+        # print("子目录:")
+        # for dirname in dirnames:
+        #     print(f"  {dirname}")
+        # print("文件:")
+        for filename in filenames:
+            # print(f"  {filename}")
+            if filename.endswith(".json"):
+                json_list.append(os.path.join(dirpath, filename))
+            elif is_image_file(filename):
+                image_list.append(os.path.join(dirpath, filename))
+        # print("-" * 20)
+    return json_list, image_list
 
 
 # ----------------------------
